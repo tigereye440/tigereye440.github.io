@@ -1,0 +1,133 @@
+/* 
+h1 {
+    color: #555;
+    font: bold 36px asap, arial;;
+}
+
+.urlBox {
+    display: table;
+    max-width: 600px;
+    margin: 0 auto;
+
+}
+
+
+input {
+    height: inherit;
+}
+
+.url-input {
+    display: table;
+    margin: 0 auto;
+
+}
+
+.submit {
+    display: table-cell;
+    width: 1%;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+ */
+
+* {
+    text-align: center;
+}
+
+/* form {
+    display: block;
+    margin: auto;
+} */
+
+
+
+.urlBox {
+    font: 14px asap, arial;
+    height: auto;
+    background-color: aliceblue;
+    padding: 20px;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    padding: auto;
+    border: 1px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.formContainer, .shortLink {
+    display: inline-block;
+    width: 100%;
+    
+}
+
+.shortLink {
+    display: none;
+}
+
+input[type="text"] {
+    height: 56px;
+    width: 75%;
+    border: 1px solid #bbb;
+    box-sizing: border-box;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#shorten, #copyLink {
+    width: auto;
+    height: 56px;
+    cursor: pointer;
+    vertical-align: middle;
+    text-align: center;
+    font-style: bold;
+    font-size: 20px;
+}
+
+#longLink {
+    color: rgb(72, 72, 190);
+}
+
+#alertDiv {
+    margin: auto;
+    margin-top: 10px;
+    display: block;
+    width: 300px;
+    height: auto;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: rgb(33, 30, 30);
+    transition: background-color 2s ease;
+
+}
+
+#copyAlert {
+    margin-top: 20px;
+    color: white;
+    font-size: 20px;
+    font-style: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+p {
+    font: 17px "source sans pro", arial;
+}
+
