@@ -1,1 +1,37 @@
-Hello, World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cut it Short</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="index.js" async></script>
+</head>
+<body>
+    <main>
+        <h1>Make IT SHORTER</h1>
+        <div class="urlBox">
+            <h1>Paste your URL here to shorten it</h1>
+                <div class="formContainer" id="longLinkContainer">
+                    <div class="urlInput formItem">
+                        <input type="text" id="url" name="url" required="true">
+                    </div>
+                    <div class="submit formItem">
+                        <button type="submit" id="shorten" onclick="shortenLink()">Shorten it</button>
+                    </div>  
+                </div>
+                <div class="shortLink" id="shortLinkContainer">
+                    <div class="formItem" >
+                        <input type="text" id="shortLinkInput" name="url" required="true">
+                    </div>
+                    <span>Long Link: <p id="longLink"></p></span>
+                    
+                    <div class="submit formItem">
+                        <button type="button" id="copyLink" onclick="copyLink()">Copy Short Link</button>
+                    </div>  
+                </div>
+            <p>A fast and simple too for shortening links and urls. Paste in your link and get the shortened link in less than a minute</p>
+        </div>
+    </main>
+</body>
+</html>
