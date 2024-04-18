@@ -21,9 +21,12 @@ h1 {
 }
 
 .formContainer, .shortLink {
-    display: inline-block;
     width: 100%;
     
+}
+
+.formContainer {
+    display: flex;
 }
 
 .shortLink {
