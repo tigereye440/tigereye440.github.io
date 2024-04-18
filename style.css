@@ -45,6 +45,8 @@ input[type="text"] {
 #shorten, #copyLink {
     width: auto;
     height: 56px;
+    border: none;
+    outline: none;
     cursor: pointer;
     vertical-align: middle;
     text-align: center;
