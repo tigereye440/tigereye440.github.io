@@ -2,6 +2,7 @@ h1 {
     font-family: 'Inter', sans-serif;
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -39,6 +40,7 @@ input[type="text"] {
     height: 56px;
     width: 75%;
     border: 1px solid #bbb;
+    border-radius: 5px;
     box-sizing: border-box;
     font-size: 20px;
     margin-bottom: 10px;
@@ -48,7 +50,9 @@ input[type="text"] {
     width: auto;
     height: 56px;
     border: none;
+    border-radius: 5px;
     outline: none;
+    padding: 5px;
     cursor: pointer;
     vertical-align: middle;
     text-align: center;
