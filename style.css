@@ -22,7 +22,7 @@ h1 {
 
 .formContainer, .shortLink {
     width: 100%;
-    
+    gap: 15px;
 }
 
 .formContainer {
