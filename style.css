@@ -1,46 +1,7 @@
-/* 
-h1 {
-    color: #555;
-    font: bold 36px asap, arial;;
-}
-
-.urlBox {
-    display: table;
-    max-width: 600px;
-    margin: 0 auto;
-
-}
-
-
-input {
-    height: inherit;
-}
-
-.url-input {
-    display: table;
-    margin: 0 auto;
-
-}
-
-.submit {
-    display: table-cell;
-    width: 1%;
-    box-sizing: border-box;
-    vertical-align: middle;
-}
-
- */
 
 * {
     text-align: center;
 }
-
-/* form {
-    display: block;
-    margin: auto;
-} */
-
-
 
 .urlBox {
     font: 14px asap, arial;
