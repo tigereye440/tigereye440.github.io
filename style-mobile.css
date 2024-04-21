@@ -1,0 +1,48 @@
+.urlBox {
+    font: 14px asap, arial;
+    height: auto;
+    background-color: teal;
+    border-radius: 10px;
+    padding: 20px;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: auto;
+    border: 1px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.formContainer {
+    display: block;
+   
+}
+
+.shortLink {
+    display: none;
+}
+
+.linkBox {
+    display: none;
+}
+
+.history {
+    width: 100%;
+}
+
+table {
+    width: inherit;
+}
+
+td {
+    max-width: 100px;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+a {
+    width: inherit;
+}
+
+
