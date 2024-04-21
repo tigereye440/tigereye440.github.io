@@ -126,6 +126,11 @@ input[type="text"] {
     color: rgb(72, 72, 190);
 }
 
+i {
+    color: black;
+    margin-left: 10px;
+}
+
 .linkBox {
     background-color: aliceblue;
     border-radius: 10px;
@@ -160,6 +165,8 @@ input[type="text"] {
     font-style: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+
 
 /* Close button */
 .close {
