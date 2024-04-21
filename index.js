@@ -8,7 +8,6 @@ const copyButton = document.getElementById('copyLink');
 const invalid = document.getElementById('invalid');
 var historyData = JSON.parse(localStorage.getItem('history')) || [];
 
-
 // Function to print history in a table form
 getHistory = () => {
   
@@ -17,9 +16,9 @@ getHistory = () => {
 
     historyData.forEach((historyTasks) => {
         const tr = document.createElement('tr');
+  
         historyTasks.forEach((task) => {
             if (regex.test(task)) {
-                console.log(task)
                 const td = document.createElement('td');
                 td.textContent = task;
                 tr.appendChild(td);
@@ -28,19 +27,23 @@ getHistory = () => {
                 a.href = task;
                 a.textContent = task;
                 a.className = "link";
+
                 const i = document.createElement('i');
-                i.style.color = "black";
-                i.style.marginLeft = "10px";
                 i.setAttribute('copy_link', task);
-                i.className = "fa-regular fa-copy" 
-                i.addEventListener('click', () => {
-                    navigator.clipboard.writeText(i.getAttribute("copy_link"));
-                })       
+                i.className = "fa-regular fa-copy"       
                 
                 const td = document.createElement('td');
                 td.appendChild(a);
                 td.appendChild(i);
                 tr.appendChild(td);
+
+                i.addEventListener('click', () => {
+                    i.className= "fa-solid fa-check"
+                    navigator.clipboard.writeText(i.getAttribute("copy_link"));
+                    setTimeout(() => {
+                        i.className = "fa-regular fa-copy";
+                    }, 3000)
+                }); 
             }
 
         });
@@ -62,9 +65,9 @@ getDate = () => {
     return currentDate;
 }
 
+
 shortenLink = () => {
 
-    // invalid.style.display = "none";
     // Get the url from the input tag
     const longLink = input.value;
    
@@ -143,38 +146,23 @@ let parsedHistories = JSON.parse(localStorage.getItem('history'));
 copyLink = () => {
     // Copy link to clipboard
     navigator.clipboard.writeText(shortLinkInput.value);    
+    copyAlert();
+}
 
-    // Create new div element
-    var alertDiv = document.getElementById('alertDiv');
+// Function to alert user of successful copy
+copyAlert = () => {
+    console.log('clicked')
+    const toastTrigger = document.getElementById('liveToastBtn')
+    const toastLiveExample = document.getElementById('liveToast')
 
-    if (alertDiv == undefined) {
-        
-        alertDiv = document.createElement("alertDiv");
-        // Set id of new div
-        alertDiv.id = "alertDiv";
-
-        // Create a new p element
-        const copyAlertTag = document.createElement('p');
-
-        // Give the p element an id
-        copyAlertTag.id = 'copyAlert'
-
-        // Create  text to add to nearly created p tag
-        const copyAlert = document.createTextNode('Link successfully copied to clipboard');
-
-        // Append text to p tag
-        copyAlertTag.appendChild(copyAlert);
-
-        // Append p tag to new div
-        alertDiv.appendChild(copyAlertTag);
-
-        // Append new div tag to parent div
-        shortLinkContainer.appendChild(alertDiv);
-    } else {
-        // do nothing
+    if (toastTrigger) {
+        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+        toastTrigger.addEventListener('click', () => {
+            toastBootstrap.show()
+        });
     }
 
-    setTimeout(() => {
-        alertDiv.remove()
-    }, 3000)
+    // setTimeout(() => {
+    //     document.getElementById('liveToast').style.display = "none";
+    // }, 10000)
 }
