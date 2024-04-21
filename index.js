@@ -33,7 +33,9 @@ getHistory = () => {
                 i.className = "fa-regular fa-copy"       
                 
                 const td = document.createElement('td');
+                const br = document.createElement('br')
                 td.appendChild(a);
+                td.appendChild(br);
                 td.appendChild(i);
                 tr.appendChild(td);
 
